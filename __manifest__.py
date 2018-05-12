@@ -21,5 +21,10 @@
         'views/assets.xml',
         'views/views.xml',
         'views/templates.xml',
+        'views/menu.xml',
+        'views/mr_category_views.xml',
+        'views/mr_type_views.xml',
+        'views/mr_movie_views.xml',
+
     ]
 }
