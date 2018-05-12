@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="action_window_mr_movie">
+            <field name="name">Movies</field>
+            <field name="res_model">mr.movie</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_mr_category">
+            <field name="name">Categories</field>
+            <field name="res_model">mr.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_window_mr_type">
+            <field name="name">Types</field>
+            <field name="res_model">mr.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem
+                name="Movie Rental"
+                id="menu_root"
+            />
+
+
+        <!-- menu -->
+        <menuitem
+                name="Movie Rental" id="movie_rental_menu"
+                parent="menu_root"
+                sequence="1"/>
+
+        <!-- menu configuration -->
+        <menuitem
+                name="Configuration" id="configuration_menu"
+                parent="menu_root"
+                sequence="2"/>
+
+        <!-- actions -->
+
+        <menuitem name="Movies"
+                  id="action_mr_movie"
+                  parent="movie_rental_menu"
+                  action="action_window_mr_movie"/>
+
+        <menuitem name="Categories"
+                  id="action_mr_category"
+                  parent="configuration_menu"
+                  action="action_window_mr_category"/>
+
+        <menuitem name="Types"
+                  id="action_mr_type"
+                  parent="configuration_menu"
+                  action="action_window_mr_type"/>
+
+    </data>
+</odoo>
