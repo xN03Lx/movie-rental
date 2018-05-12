@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mr_category_tree">
+            <field name="name">movie_rental category</field>
+            <field name="model">mr.category</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mr_category_form">
+            <field name="name">movie_rental category</field>
+            <field name="model">mr.category</field>
+
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="2" string="Category data">
+                            <field name="name" />
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
